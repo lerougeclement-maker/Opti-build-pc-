@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique | Opti-build PC Valenciennes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        body.modal-active { overflow: hidden; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
 
+    <nav class="bg-white shadow-sm sticky top-0 z-50 px-4 py-4 font-bold uppercase tracking-widest text-[10px]">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-blue-600 tracking-tighter normal-case">Opti-build PC</a>
+            <div class="flex space-x-6 text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Accueil</a>
+                <a href="boutique.html" class="text-blue-600">Boutique</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-slate-100 py-12 px-4 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-black uppercase italic tracking-tighter text-slate-800">Configurations Disponibles</h2>
+            <p class="text-slate-500 font-medium italic mt-2 text-sm">Matériel révisé, testé et prêt pour le gaming à Valenciennes.</p>
+        </div>
+    </header>
+
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden flex flex-col h-full border border-slate-200/50 hover:shadow-2xl transition">
+                <img src="https://i.ibb.co/bRWGv3bP/IMG-20260307-182630.jpg" class="h-80 w-full object-cover">
+                <div class="p-8 flex flex-col flex-grow">
+                    <h4 class="text-xl font-black mb-4 uppercase italic">PC Gamer White - i5-9400</h4>
+                    <div class="space-y-2 text-sm text-slate-600 flex-grow font-bold italic">
+                        <p><i class="fas fa-microchip mr-2 text-blue-500"></i> i5-9400 | RX 580</p>
+                        <p><i class="fas fa-memory mr-2 text-blue-500"></i> 16 Go RAM DDR4</p>
+                        <p><i class="fas fa-database mr-2 text-blue-500"></i> 850 Go Triple SSD</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t flex justify-between items-center font-black">
+                        <span class="text-3xl tracking-tighter italic">445€</span>
+                        <a href="https://wa.me/33648541246?text=Bonjour, je suis intéressé par le PC i5-9400 à 445€" class="bg-[#25D366] text-white px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition flex items-center font-black uppercase text-[10px] italic">
+                            <i class="fab fa-whatsapp mr-2 text-lg"></i> Réserver
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden flex flex-col h-full border border-slate-200/50 opacity-70 grayscale-[0.4] relative">
+                <div class="absolute top-6 left-6 z-30 bg-red-600 text-white font-black px-6 py-2 rounded-full uppercase tracking-widest text-xs shadow-xl rotate-[-5deg] border-2 border-white">VENDU</div>
+                <img src="https://i.ibb.co/PzDzxC2h/IMG-20260304-174213.jpg" class="h-80 w-full object-cover">
+                <div class="p-8 flex flex-col flex-grow">
+                    <h4 class="text-xl font-black mb-4 uppercase italic text-slate-500">PC Gamer White - i5-7400</h4>
+                    <p class="text-sm font-bold italic text-slate-400">Vendu à un client sur Valenciennes cette semaine.</p>
+                    <div class="mt-auto pt-8 border-t flex justify-between items-center font-black text-slate-400">
+                        <span class="text-xl italic uppercase tracking-tighter">Indisponible</span>
+                        <i class="fas fa-lock text-xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden flex flex-col h-full border border-slate-200/50 hover:shadow-2xl transition">
+                <img src="https://i.ibb.co/mFyGjbMP/IMG-20260305-215755.jpg" class="h-80 w-full object-cover">
+                <div class="p-8 flex flex-col flex-grow">
+                    <h4 class="text-xl font-black mb-4 uppercase italic">PC Gaming Réactif - 32 Go</h4>
+                    <div class="space-y-2 text-sm text-slate-600 flex-grow font-bold italic">
+                        <p><i class="fas fa-video mr-2 text-blue-500 font-black"></i> GTX 1050 Ti</p>
+                        <p><i class="fas fa-memory mr-2 text-blue-500 font-black"></i> 32 Go RAM Crucial</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t flex justify-between items-center font-black">
+                        <span class="text-3xl tracking-tighter italic">350€</span>
+                        <a href="https://wa.me/33648541246?text=Bonjour, je suis intéressé par le PC 32Go à 350€" class="bg-[#25D366] text-white px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition flex items-center font-black uppercase text-[10px] italic">
+                            <i class="fab fa-whatsapp mr-2 text-lg"></i> Réserver
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden flex flex-col h-full border border-slate-200/50 hover:shadow-2xl transition">
+                <img src="https://i.ibb.co/TxmQHTdS/IMG-20260204-185106.jpg" class="h-80 w-full object-cover">
+                <div class="p-8 flex flex-col flex-grow">
+                    <h4 class="text-xl font-black mb-4 uppercase italic italic">PC Gamer Blue - GTX 1650</h4>
+                    <div class="space-y-2 text-sm text-slate-600 flex-grow font-bold italic">
+                        <p><i class="fas fa-video mr-2 text-blue-500 font-black"></i> GTX 1650 (GDDR6)</p>
+                        <p><i class="fas fa-microchip mr-2 text-blue-500"></i> Intel Core i5</p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t flex justify-between items-center font-black">
+                        <span class="text-3xl tracking-tighter italic">300€</span>
+                        <a href="https://wa.me/33648541246?text=Bonjour, je suis intéressé par le PC GTX 1650 à 300€" class="bg-[#25D366] text-white px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition flex items-center font-black uppercase text-[10px] italic">
+                            <i class="fab fa-whatsapp mr-2 text-lg"></i> Réserver
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-12 text-center border-t border-white/10">
+        <h1 class="text-xl font-black text-blue-500 uppercase tracking-[0.4em] mb-4">Opti-build PC</h1>
+        <p class="text-[9px] text-slate-500 uppercase tracking-[0.4em]">© 2026 • Valenciennes • Montage de Précision</p>
+    </footer>
+
+</body>
+</html>
