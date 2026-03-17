@@ -3,69 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Opti-build PC | Expert PC Gamer sur mesure à Valenciennes</title>
-    <meta name="description" content="Montage d'ordinateurs gaming sur mesure à Valenciennes. Plus de 30 clients satisfaits. Devis gratuit, optimisation et composants haute qualité.">
-
+    <title>Opti-build PC | Valenciennes</title>
     <style>
         body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-family: 'Segoe UI', sans-serif; 
             margin: 0; 
             background-color: #0b0e14; 
             color: white; 
-            line-height: 1.6;
         }
         
         header { 
-            padding: 60px 20px; 
+            padding: 50px 20px; 
             text-align: center; 
-            background: linear-gradient(135deg, #0b0e14 0%, #1a2a44 100%); 
+            background: linear-gradient(180deg, #1a2a44 0%, #0b0e14 100%); 
             border-bottom: 2px solid #00d4ff;
         }
 
-        h1 { margin: 0; font-size: 2.5em; letter-spacing: 2px; text-transform: uppercase; }
-        .subtitle { color: #00d4ff; font-weight: bold; text-transform: uppercase; font-size: 0.9em; letter-spacing: 1px; }
-
         .container { 
-            max-width: 900px; 
+            max-width: 800px; 
             margin: auto; 
-            padding: 40px 20px; 
+            padding: 20px; 
             text-align: center; 
         }
 
         .card {
             background: #161b22;
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
             border: 1px solid #30363d;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            margin-top: 20px;
         }
 
-        /* WIDGET WHATSAPP PERSONNALISÉ */
-        #wa-widget {
+        /* LE BOUTON FLOTTANT (TON LOGO) */
+        .wa-widget-container {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 1000;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
         }
 
-        /* Fenêtre de Chat qui s'ouvre */
-        #wa-window {
-            display: none;
-            width: 300px;
+        .wa-button {
+            width: 70px;
+            height: 70px;
+            background: #1a2a44;
+            border-radius: 50%;
+            border: 3px solid #00d4ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0, 212, 255, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+        }
+
+        /* FENETRE DE CHAT */
+        #wa-box {
+            display: none; /* Caché par défaut */
+            width: 280px;
             background: white;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin-bottom: 15px;
             overflow: hidden;
-            text-align: left;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .wa-header {
@@ -76,114 +81,89 @@
             align-items: center;
         }
 
-        /* Petit logo Opti-build dans le chat */
-        .wa-logo-small {
-            width: 45px;
-            height: 45px;
+        .wa-logo-in-chat {
+            width: 40px;
+            height: 40px;
             background: #0b0e14;
             border-radius: 50%;
-            margin-right: 12px;
+            margin-right: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid #00d4ff;
+            border: 1px solid #00d4ff;
         }
 
-        .wa-body {
-            padding: 20px;
-            color: #333;
-            font-size: 14px;
-            background: #f0f2f5;
-        }
+        .wa-content { padding: 20px; color: #333; background: #f0f2f5; font-size: 14px; }
 
-        .wa-btn {
+        .wa-link {
             display: block;
+            margin: 10px;
             background: #25d366;
             color: white;
             text-align: center;
             padding: 12px;
             text-decoration: none;
+            border-radius: 10px;
             font-weight: bold;
-            margin: 12px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .wa-btn:hover { background: #1da851; }
-
-        /* BOUTON FLOTTANT (TON LOGO) */
-        .wa-float-button {
-            width: 65px;
-            height: 65px;
-            background-color: #1a2a44;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,212,255,0.4);
-            border: 2px solid #00d4ff;
-            animation: pulse 2s infinite;
-            transition: 0.3s;
-        }
-
-        .wa-float-button:hover { transform: scale(1.1); }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(0, 212, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
-        }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            font-size: 0.8em;
-            color: #8b949e;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>OPTI-BUILD PC</h1>
-        <p class="subtitle">L'expertise gaming à Valenciennes</p>
+        <h1 style="margin:0;">OPTI-BUILD PC</h1>
+        <p style="color:#00d4ff; margin:5px 0 0 0;">MONTAGE SUR MESURE VALENCIENNES</p>
     </header>
 
     <div class="container">
         <div class="card">
-            <h2>Montages PC Haut de Gamme</h2>
-            <p>Spécialiste du montage d'ordinateurs sur mesure. Que ce soit pour le gaming intensif ou le travail créatif, je conçois la machine qui répond à vos besoins.</p>
-            <p>✅ Plus de 30 configurations réalisées<br>
-               ✅ Stress-test de 2h inclus<br>
-               ✅ Cable management soigné</p>
-        </div>
-
-        <div class="card">
-            <h2>Pourquoi choisir Opti-build ?</h2>
-            <p>Basé à <strong>Valenciennes</strong>, je privilégie la proximité et la qualité. Chaque composant est choisi avec soin et chaque PC est livré prêt à l'emploi (BIOS à jour, drivers installés).</p>
+            <h2>Expertise & Passion</h2>
+            <p>Plus de 30 clients m'ont déjà fait confiance pour leur setup.</p>
+            <ul style="list-style:none; padding:0; text-align:left; display:inline-block;">
+                <li>✅ Montage soigné</li>
+                <li>✅ Optimisation FPS</li>
+                <li>✅ Devis gratuit</li>
+            </ul>
         </div>
     </div>
 
-    <div id="wa-widget">
-        <div id="wa-window">
+    <div class="wa-widget-container">
+        <div id="wa-box">
             <div class="wa-header">
-                <div class="wa-logo-small">
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="5" y="3" width="14" height="18" rx="2" stroke="#00d4ff" stroke-width="2"/>
-                        <circle cx="12" cy="8" r="3" stroke="#00d4ff" stroke-width="1.5"/>
-                        <path d="M8 15h8M8 18h4" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                <div class="wa-logo-in-chat">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#00d4ff" stroke-width="2">
+                        <rect x="5" y="3" width="14" height="18" rx="2"/>
+                        <circle cx="12" cy="8" r="3"/>
                     </svg>
                 </div>
                 <div>
-                    <div style="font-weight: bold; font-size: 15px;">Opti-build PC</div>
-                    <div style="font-size: 11px; color: #00d4ff;">En ligne (Réponse rapide)</div>
+                    <strong>Opti-build PC</strong><br>
+                    <span style="font-size:10px; color:#00d4ff;">En ligne</span>
                 </div>
             </div>
-            <div class="wa-body">
-                Bonjour ! Comment puis-je vous aider dans votre projet de montage PC ?
-            </div>
-            <a href="https://wa.me/33769188046" class="wa-btn" target="_blank">Démarrer la discussion</a>
+            <div class="wa-content">Bonjour ! Un projet PC en tête ? Je vous réponds ici.</div>
+            <a href="https://wa.me/33769188046" class="wa-link" target="_blank">Discuter sur WhatsApp</a>
         </div>
 
-        <div class="wa-float-button
+        <div class="wa-button" onclick="toggleChat()">
+            <svg viewBox="0 0 24 24" width="45" height="45" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="3" width="14" height="18" rx="2"/>
+                <circle cx="12" cy="8" r="3"/>
+                <path d="M9 15h6M9 18h3"/>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var box = document.getElementById('wa-box');
+            if (box.style.display === 'none' || box.style.display === '') {
+                box.style.display = 'block';
+            } else {
+                box.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
